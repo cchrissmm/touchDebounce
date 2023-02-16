@@ -40,14 +40,14 @@ int touchBounce::touchRun() {
     if (highTimer.state() == RUNNING && highTimer.read() > delay)
     {
         highTimer.stop();
-        state = 1;
+        state = 0;
         Serial.println("high output set");
     }
 
     if (lowTimer.state() == RUNNING && lowTimer.read() > delay)
     {
         lowTimer.stop();
-        state = 0;
+        state = 1;
         Serial.println("low output set");
     }
 

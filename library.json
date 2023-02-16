@@ -1,0 +1,21 @@
+{
+    "name": "touchdebounce",
+    "version": "0.0.1",
+    "description": "a debouncer that works with ESP32 touch pins",
+    "keywords": [
+        "ESP32, touch, debounce"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cchrissmm/touchDebounce"
+    },
+    "authors": [
+        {
+            "name": "Your name",
+            "email": "your@email.com"
+        }
+    ],
+    "dependencies": {
+        "sstaub/Timer":"1.2.1"
+    }
+}
