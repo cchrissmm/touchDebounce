@@ -27,32 +27,32 @@ int touchBounce::touchRun() {
     {
         highTimer.start();
         lowTimer.stop();
-        Serial.println("high timer started");
+        //Serial.println("high timer started");
     }
 
     if (touchVal < threshold && lowTimer.state() == STOPPED)
     {
         lowTimer.start();
         highTimer.stop();
-        Serial.println("low timer started");
+        //Serial.println("low timer started");
     }
 
     if (highTimer.state() == RUNNING && highTimer.read() > delay)
     {
         highTimer.stop();
         state = 0;
-        Serial.println("high output set");
+        //Serial.println("high output set");
     }
 
     if (lowTimer.state() == RUNNING && lowTimer.read() > delay)
     {
         lowTimer.stop();
         state = 1;
-        Serial.println("low output set");
+        //Serial.println("low output set");
     }
 
 
-    Serial.println("touchVal: " + String(touchVal) + " state: " + String(state));
+    //Serial.println("touchVal: " + String(touchVal) + " state: " + String(state));
     
     return state;
 }
