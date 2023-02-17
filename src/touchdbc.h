@@ -2,6 +2,7 @@
 #define TOUCHDBC_H_
 
 #include <Arduino.h>
+#include <Timer.h>
 
 class touchBounce {
 public:
@@ -13,6 +14,9 @@ private:
     int touchPin;
     int threshold;
     int delay;
-    int state = 0;
+    int outState;
+
+    Timer highTimer;
+    Timer lowTimer;
 };
 #endif
