@@ -62,3 +62,7 @@ int touchBounce::touchRun() {
     return outState;
 }
 
+int touchBounce::dbgTouchVal() {
+    return touchRead(touchPin);
+}
+

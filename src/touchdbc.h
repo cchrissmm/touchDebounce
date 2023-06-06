@@ -9,6 +9,7 @@ public:
     touchBounce();
     void setup(int touchPin, int threshold, int delay);
     int touchRun();
+    int dbgTouchVal();
 
 private:
     int touchPin;
